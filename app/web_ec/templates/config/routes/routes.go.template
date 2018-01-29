@@ -1,0 +1,16 @@
+package routes
+
+import (
+	"github.com/gin-gonic/gin"
+  "{{package_path}}/app/controllers"
+)
+
+var router = gin.Default()
+
+func GetRouter() *gin.Engine {
+	return router
+}
+
+func init() {
+  GetRouter().GET("/", controllers.Index)
+}

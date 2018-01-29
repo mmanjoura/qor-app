@@ -1,0 +1,10 @@
+package controllers
+
+import (
+	"github.com/gin-gonic/gin"
+	"{{package_path}}/config"
+)
+
+func Index(c *gin.Context) {
+	config.Render.Execute("index", nil, c.Request, c.Writer)
+}

@@ -1,0 +1,11 @@
+package routes
+
+func init() {
+	router := GetRouter()
+	router.Static("/css", "./public/css")
+	router.Static("/javascripts", "./public/javascripts")
+	router.Static("/images", "./public/images")
+	router.Static("/fonts", "./public/fonts")
+	router.Static("/system", "./public/system")
+}
+
